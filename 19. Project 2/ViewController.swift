@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class Project2ViewController: UIViewController {
 
     @IBOutlet var button1: UIButton!
     @IBOutlet var button2: UIButton!
@@ -21,6 +21,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Проверка, существует ли navigationController
+        if navigationController == nil {
+            print("navigationController не существует")
+        } else {
+            print("navigationController существует")
+        }
+        navigationController?.setNavigationBarHidden(false, animated: true)
+
         countries += ["estonia", "france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "spain", "uk", "us"]
         
         button1.layer.borderWidth = 1
@@ -63,5 +71,11 @@ class ViewController: UIViewController {
         present(ac, animated: true)
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("ViewController появился на экране")
+    }
+    
 }
 
