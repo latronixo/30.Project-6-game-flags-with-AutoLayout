@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet var button1: UIButton!
     @IBOutlet var button2: UIButton!
     @IBOutlet var button3: UIButton!
+    @IBOutlet var titleLabel: UILabel!
     
     var countries = [String]()
     var score = 0
@@ -33,7 +34,7 @@ class ViewController: UIViewController {
         askQuestion()
     }
 
-    func askQuestion() {
+    func askQuestion(action: UIAlertAction! = nil) {
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
         
@@ -41,8 +42,26 @@ class ViewController: UIViewController {
         button2.setImage(UIImage(named: countries[1]), for: .normal)
         button3.setImage(UIImage(named: countries[2]), for: .normal)
         
-        title = countries[correctAnswer].uppercased()
+        titleLabel.text = countries[correctAnswer].uppercased()
     }
 
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        print("Кнопка нажата")
+        var title: String
+        
+        if sender.tag == correctAnswer {
+            title = "Верно"
+            score += 1
+        } else {
+            title = "Неверно"
+            score -= 1
+        }
+        
+        let ac = UIAlertController(title: title, message: "Ваш счет \(score)", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Продолжить", style: .default, handler: askQuestion))
+        
+        present(ac, animated: true)
+        
+    }
 }
 
