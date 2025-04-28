@@ -58,12 +58,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Баллы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVL-2h-5G0">
+                                <rect key="frame" x="305.66666666666669" y="125" width="50.333333333333314" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="HTH-bY-JjU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="21S-xw-PoN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nVL-2h-5G0" secondAttribute="trailing" constant="37" id="4Ny-Fl-2zY"/>
                             <constraint firstItem="HTH-bY-JjU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="200" id="Aeg-0o-Q9i"/>
+                            <constraint firstItem="nVL-2h-5G0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="7" id="Jcn-XH-6pJ"/>
                             <constraint firstItem="Q9s-pT-kj1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Jga-UX-dwy"/>
                             <constraint firstItem="Bgf-An-GkC" firstAttribute="top" secondItem="HTH-bY-JjU" secondAttribute="bottom" constant="30" id="KmY-iW-ty1"/>
                             <constraint firstItem="yOE-DG-kIx" firstAttribute="top" secondItem="Bgf-An-GkC" secondAttribute="bottom" constant="30" id="PsB-pf-utu"/>
@@ -81,6 +89,7 @@
                         <outlet property="button1" destination="HTH-bY-JjU" id="XZA-zR-23a"/>
                         <outlet property="button2" destination="Bgf-An-GkC" id="gZY-N2-IfJ"/>
                         <outlet property="button3" destination="yOE-DG-kIx" id="cp8-Jz-pQF"/>
+                        <outlet property="scoresLabel" destination="nVL-2h-5G0" id="0zR-kp-hXz"/>
                         <outlet property="titleLabel" destination="Q9s-pT-kj1" id="5YJ-X7-lAV"/>
                     </connections>
                 </viewController>

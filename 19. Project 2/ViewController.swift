@@ -13,22 +13,16 @@ class Project2ViewController: UIViewController {
     @IBOutlet var button2: UIButton!
     @IBOutlet var button3: UIButton!
     @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var scoresLabel: UILabel!
     
     var countries = [String]()
     var score = 0
     var correctAnswer = 0
+    var questionNumber = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Проверка, существует ли navigationController
-        if navigationController == nil {
-            print("navigationController не существует")
-        } else {
-            print("navigationController существует")
-        }
-        navigationController?.setNavigationBarHidden(false, animated: true)
-
         countries += ["estonia", "france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "spain", "uk", "us"]
         
         button1.layer.borderWidth = 1
@@ -40,6 +34,8 @@ class Project2ViewController: UIViewController {
         button3.layer.borderColor = UIColor.lightGray.cgColor
 
         askQuestion()
+        
+        scoresLabel.text = "0 Баллов"
     }
 
     func askQuestion(action: UIAlertAction! = nil) {
@@ -54,7 +50,7 @@ class Project2ViewController: UIViewController {
     }
 
     @IBAction func buttonTapped(_ sender: UIButton) {
-        print("Кнопка нажата")
+        print("вопрос № \(questionNumber)")
         var title: String
         
         if sender.tag == correctAnswer {
@@ -63,13 +59,51 @@ class Project2ViewController: UIViewController {
         } else {
             title = "Неверно"
             score -= 1
+            
+            // Создаем первый алерт (об ошибке)
+            let errorAlert = UIAlertController(title: "Упс...", message: "ошибочка 😨", preferredStyle: .alert)
+            
+            // Добавляем действие, которое выполнится после закрытия этого алерта
+            errorAlert.addAction(UIAlertAction(title: "пофиг", style: .default) { [weak self] _ in
+                guard let self = self else { return }
+                
+                // Проверяем, не закончилась ли игра
+                if self.questionNumber == 10 {
+                    // Создаем второй алерт (об окончании игры)
+                    let finalAlert = UIAlertController(title: title,
+                                                      message: "Ваш счет \(self.score)",
+                                                      preferredStyle: .alert)
+                    finalAlert.addAction(UIAlertAction(title: "Игра окончена", style: .default, handler: self.askQuestion))
+                    
+                    self.present(finalAlert, animated: true)
+                    self.questionNumber = 1
+                    self.score = 0
+                } else {
+                    self.questionNumber += 1
+                    self.askQuestion()
+                }
+                
+                self.scoresLabel.text = "Баллов: \(self.score)"
+            })
+            
+            present(errorAlert, animated: true)
+            return // Важно: выходим из метода здесь
         }
         
-        let ac = UIAlertController(title: title, message: "Ваш счет \(score)", preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "Продолжить", style: .default, handler: askQuestion))
+        // Этот код выполняется только для правильных ответов
+        if questionNumber == 10 {
+            let ac = UIAlertController(title: title, message: "Ваш счет \(score)", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Игра окончена", style: .default, handler: askQuestion))
+            
+            present(ac, animated: true)
+            questionNumber = 1
+            score = 0
+        } else {
+            questionNumber += 1
+            askQuestion()
+        }
         
-        present(ac, animated: true)
-        
+        scoresLabel.text = "Баллов: \(score)"
     }
     
     override func viewWillAppear(_ animated: Bool) {
