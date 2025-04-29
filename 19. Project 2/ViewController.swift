@@ -13,7 +13,7 @@ class Project2ViewController: UIViewController {
     @IBOutlet var button2: UIButton!
     @IBOutlet var button3: UIButton!
     @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var scoresLabel: UILabel!
+    @IBOutlet var scoresButton: UIButton!
     
     var countries = [String]()
     var score = 0
@@ -35,7 +35,7 @@ class Project2ViewController: UIViewController {
 
         askQuestion()
         
-        scoresLabel.text = "0 Баллов"
+        scoresButton.setTitle("узнать баллы", for: .normal)
     }
 
     func askQuestion(action: UIAlertAction! = nil) {
@@ -82,8 +82,6 @@ class Project2ViewController: UIViewController {
                     self.questionNumber += 1
                     self.askQuestion()
                 }
-                
-                self.scoresLabel.text = "Баллов: \(self.score)"
             })
             
             present(errorAlert, animated: true)
@@ -102,14 +100,17 @@ class Project2ViewController: UIViewController {
             questionNumber += 1
             askQuestion()
         }
-        
-        scoresLabel.text = "Баллов: \(score)"
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("ViewController появился на экране")
     }
+    
+    @IBAction func scoreButtonTapped(_ sender: UIButton) {
+        scoresButton.setTitle("Баллов: \(score)", for: .normal)
+    }
+    
     
 }
 
