@@ -7,26 +7,26 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		6BDE4EC52DBD327600D35EAD /* 19. Project 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "19. Project 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BDE4EC52DBD327600D35EAD /* 30. Project 6 (game flags with AutoLayout).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "30. Project 6 (game flags with AutoLayout).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		6BDE4ED72DBD327900D35EAD /* Exceptions for "19. Project 2" folder in "19. Project 2" target */ = {
+		6BDE4ED72DBD327900D35EAD /* Exceptions for "30. Project 6 (game flags with AutoLayout)" folder in "30. Project 6 (game flags with AutoLayout)" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = 6BDE4EC42DBD327600D35EAD /* 19. Project 2 */;
+			target = 6BDE4EC42DBD327600D35EAD /* 30. Project 6 (game flags with AutoLayout) */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		6BDE4EC72DBD327600D35EAD /* 19. Project 2 */ = {
+		6BDE4EC72DBD327600D35EAD /* 30. Project 6 (game flags with AutoLayout) */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				6BDE4ED72DBD327900D35EAD /* Exceptions for "19. Project 2" folder in "19. Project 2" target */,
+				6BDE4ED72DBD327900D35EAD /* Exceptions for "30. Project 6 (game flags with AutoLayout)" folder in "30. Project 6 (game flags with AutoLayout)" target */,
 			);
-			path = "19. Project 2";
+			path = "30. Project 6 (game flags with AutoLayout)";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -45,7 +45,7 @@
 		6BDE4EBC2DBD327600D35EAD = {
 			isa = PBXGroup;
 			children = (
-				6BDE4EC72DBD327600D35EAD /* 19. Project 2 */,
+				6BDE4EC72DBD327600D35EAD /* 30. Project 6 (game flags with AutoLayout) */,
 				6BDE4EC62DBD327600D35EAD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,7 +53,7 @@
 		6BDE4EC62DBD327600D35EAD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6BDE4EC52DBD327600D35EAD /* 19. Project 2.app */,
+				6BDE4EC52DBD327600D35EAD /* 30. Project 6 (game flags with AutoLayout).app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,9 +61,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6BDE4EC42DBD327600D35EAD /* 19. Project 2 */ = {
+		6BDE4EC42DBD327600D35EAD /* 30. Project 6 (game flags with AutoLayout) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6BDE4ED82DBD327900D35EAD /* Build configuration list for PBXNativeTarget "19. Project 2" */;
+			buildConfigurationList = 6BDE4ED82DBD327900D35EAD /* Build configuration list for PBXNativeTarget "30. Project 6 (game flags with AutoLayout)" */;
 			buildPhases = (
 				6BDE4EC12DBD327600D35EAD /* Sources */,
 				6BDE4EC22DBD327600D35EAD /* Frameworks */,
@@ -74,13 +74,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				6BDE4EC72DBD327600D35EAD /* 19. Project 2 */,
+				6BDE4EC72DBD327600D35EAD /* 30. Project 6 (game flags with AutoLayout) */,
 			);
-			name = "19. Project 2";
+			name = "30. Project 6 (game flags with AutoLayout)";
 			packageProductDependencies = (
 			);
 			productName = "19. Project 2";
-			productReference = 6BDE4EC52DBD327600D35EAD /* 19. Project 2.app */;
+			productReference = 6BDE4EC52DBD327600D35EAD /* 30. Project 6 (game flags with AutoLayout).app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -98,7 +98,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6BDE4EC02DBD327600D35EAD /* Build configuration list for PBXProject "19. Project 2" */;
+			buildConfigurationList = 6BDE4EC02DBD327600D35EAD /* Build configuration list for PBXProject "30. Project 6 (game flags with AutoLayout)" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -112,7 +112,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6BDE4EC42DBD327600D35EAD /* 19. Project 2 */,
+				6BDE4EC42DBD327600D35EAD /* 30. Project 6 (game flags with AutoLayout) */,
 			);
 		};
 /* End PBXProject section */
@@ -147,7 +147,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z4PKJ57KTJ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "19. Project 2/Info.plist";
+				INFOPLIST_FILE = "30. Project 6 (game flags with AutoLayout)/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -175,7 +175,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z4PKJ57KTJ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "19. Project 2/Info.plist";
+				INFOPLIST_FILE = "30. Project 6 (game flags with AutoLayout)/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -318,7 +318,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6BDE4EC02DBD327600D35EAD /* Build configuration list for PBXProject "19. Project 2" */ = {
+		6BDE4EC02DBD327600D35EAD /* Build configuration list for PBXProject "30. Project 6 (game flags with AutoLayout)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6BDE4EDB2DBD327900D35EAD /* Debug */,
@@ -327,7 +327,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6BDE4ED82DBD327900D35EAD /* Build configuration list for PBXNativeTarget "19. Project 2" */ = {
+		6BDE4ED82DBD327900D35EAD /* Build configuration list for PBXNativeTarget "30. Project 6 (game flags with AutoLayout)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6BDE4ED92DBD327900D35EAD /* Debug */,
